@@ -19,7 +19,7 @@ addEventListener('scheduled', event => {
  */
 async function handleRequest(event) {
   // User-Agent, or we'll be hit with the are you human check
-  const response = await fetch('https://blog.cloudflare.com/rss', {
+  const response = await fetch('https://mangasco.com/feed/manga-chapters', {
       headers: { 'User-Agent': Config.userAgent }
   });
 
@@ -102,7 +102,7 @@ async function sendMessage(post) {
 
   if(Config.useEmbedThumbnail) Object.assign(data, {
     thumbnail: {
-      url: 'https://blog.cloudflare.com/favicon_package_v0.16/apple-touch-icon.png'
+      url: 'https://cdn.mangasco.com/banner/logo-dark-1.png'
     }
   })
 
